@@ -11,7 +11,7 @@ public class GrayScale extends Filter {
     /**
      * Turn an image in grayscales
      * @param image the original image
-     * @return thge image in grayscales
+     * @return the image in grayscales
      */
     public static Mat filterGrayscale(Mat image) {
         Mat result = new Mat(image.rows(), image.cols(), CvType.CV_8UC3);

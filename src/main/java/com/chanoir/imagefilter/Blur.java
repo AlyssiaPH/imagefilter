@@ -13,10 +13,16 @@ public class Blur extends Filter {
      * @param size The size of the blur
      * @return the image with the blur effect
      */
-    public static Mat filterBlur(Mat image, int size) {
-        Mat result = image.clone();
-        GaussianBlur(image, result, new Size(size, size), 0);
-        return result;
+    public static Mat filterBlur(Mat image, int size) throws BlurException {
+        if (size %2 == 0 || size<0){
+            throw new BlurException("The size of blur have to be odd and >0.");
+        }
+        else {
+            Mat result = image.clone();
+            GaussianBlur(image, result, new Size(size, size), 0);
+            return result;
+        }
+
     }
 }
 
