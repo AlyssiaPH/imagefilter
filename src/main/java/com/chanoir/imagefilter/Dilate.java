@@ -15,9 +15,9 @@ public class Dilate extends Filter {
      * @param size The size of the blur
      * @return the image dilated
      */
-    public static Mat filterDilate(Mat image, int size) throws DilateException {
+    public static Mat filterDilate(Mat image, int size) throws FilterException {
         if (size<0){
-            throw new DilateException("the size have to be superior of 0.");
+            throw new FilterException("the size have to be superior of 0.");
         }
         else {
             Mat result = image.clone();

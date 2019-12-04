@@ -14,20 +14,20 @@ public class Main {
         Mat img = imread("img/KFC.jpg");
         if("img" != null){
             try {
-                img = Blur.filterBlur(img,79);
+                img = Blur.filterBlur(img,73);
             }
-            catch (BlurException e) {
+            catch (FilterException e) {
                 e.printStackTrace();
             }
             img = GrayScale.filterGrayscale(img);
             try {
-                img = Dilate.filterDilate(img,6);
-            } catch (DilateException e) {
+                img = Dilate.filterDilate(img,10);
+            } catch (FilterException e) {
                 e.printStackTrace();
             }
             img = img;
             imwrite("img_output/img.jpg", img);
-            System.out.println("Done");
+            System.out.println("///Done///");
         }
     }
 }
