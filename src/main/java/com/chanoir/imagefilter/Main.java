@@ -12,11 +12,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<File> fileslist = new ArrayList();
+        ArrayList<File> fileslist = new ArrayList<>();
+        File outputDir = new File("img_output");
+        outputDir.mkdirs();
 
         for (File f : repertory.listFiles()) {
             Mat img = imread(f.getAbsolutePath());
-            if ("img" != null) {
+            if (img != null) {
                 try {
                     img = Blur.filterBlur(img, 45);
                     img = GrayScale.filterGrayscale(img);
@@ -26,7 +28,9 @@ public class Main {
                 }
 
                 img = img;
-                imwrite("img_output/img.jpg", img);
+
+                File outputFile = new File(outputDir, f.getName());
+                imwrite(outputFile.getAbsolutePath(), img);
                 System.out.println("///Done///");
             }
         }
