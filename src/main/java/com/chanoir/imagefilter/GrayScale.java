@@ -8,7 +8,12 @@ import static org.bytedeco.opencv.global.opencv_imgproc.cvtColor;
 
 public class GrayScale extends Filter {
 
-    public Mat filterGrayscale(Mat image) {
+    /**
+     * Turn an image in grayscales
+     * @param image the original image
+     * @return thge image in grayscales
+     */
+    public static Mat filterGrayscale(Mat image) {
         Mat result = new Mat(image.rows(), image.cols(), CvType.CV_8UC3);
         cvtColor(image, result, Imgproc.COLOR_RGB2GRAY);
         return result;

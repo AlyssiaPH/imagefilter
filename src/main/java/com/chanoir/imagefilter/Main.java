@@ -14,7 +14,9 @@ public class Main {
     public static void main(String[] args) {
         Mat image = imread("img/Donuuut.PNG");
         if("img" != null){
-            Mat out = Blur.filterBlur(image,17);
+            Mat out = Blur.filterBlur(image,45);
+            out = GrayScale.filterGrayscale(out);
+            out = Dilate.filterDilate(out,17);
             imwrite("img_output/Donuuut2.PNG", out);
             System.out.println("Done");
         }
