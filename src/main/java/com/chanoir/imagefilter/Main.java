@@ -18,9 +18,10 @@ public class Main {
         outputDir.mkdirs();
 
         for (File f : repertory.listFiles()) {
-            if (!f.getName().endsWith(".jpg")) {
+            if (!f.getName().endsWith(".PNG") && !f.getName().endsWith(".jpg") && !f.getName().endsWith(".jpeg") ) {
                 continue;
             }
+
 
             System.out.println(f);
             Mat img = imread(f.getAbsolutePath());
