@@ -15,7 +15,7 @@ public class Blur extends Filter {
      */
     public static Mat filterBlur(Mat image, int size) throws FilterException {
         if (size %2 == 0 || size<0){
-            throw new FilterException("The size of blur have to be odd and >0.");
+            throw new FilterException("The blur size need to be odd and >0.");
         }
         else {
             Mat result = image.clone();
