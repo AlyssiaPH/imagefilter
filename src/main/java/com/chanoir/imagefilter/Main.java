@@ -14,17 +14,14 @@ public class Main {
         Mat img = imread("img/KFC.jpg");
         if("img" != null){
             try {
-                img = Blur.filterBlur(img,73);
+                img = Blur.filterBlur(img,74);
+                img = GrayScale.filterGrayscale(img);
+                img = Dilate.filterDilate(img,10);
             }
             catch (FilterException e) {
                 e.printStackTrace();
             }
-            img = GrayScale.filterGrayscale(img);
-            try {
-                img = Dilate.filterDilate(img,10);
-            } catch (FilterException e) {
-                e.printStackTrace();
-            }
+            
             img = img;
             imwrite("img_output/img.jpg", img);
             System.out.println("///Done///");
