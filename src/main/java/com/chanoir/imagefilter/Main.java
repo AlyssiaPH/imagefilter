@@ -8,6 +8,7 @@ import static org.bytedeco.opencv.global.opencv_imgcodecs.imwrite;
 
 public class Main {
 
+    public static File repertoryOut = new File("img_output");
     public static File repertory = new File("img");
 
     public static void main(String[] args) {
@@ -17,6 +18,11 @@ public class Main {
         outputDir.mkdirs();
 
         for (File f : repertory.listFiles()) {
+            if (!f.getName().endsWith(".jpg")) {
+                continue;
+            }
+
+            System.out.println(f);
             Mat img = imread(f.getAbsolutePath());
             if (img != null) {
                 try {
