@@ -11,19 +11,22 @@ public class Main {
     //public static File repertory = new File("ImageFile.java");
 
     public static void main(String[] args) {
-        Mat image = imread("img/Donuuut.PNG");
+        Mat img = imread("img/KFC.jpg");
         if("img" != null){
-            Mat out = null;
             try {
-                out = Blur.filterBlur(image,-41);
+                img = Blur.filterBlur(img,79);
             }
             catch (BlurException e) {
                 e.printStackTrace();
             }
-            System.out.println("Next////////////");
-            out = GrayScale.filterGrayscale(out);
-            out = Dilate.filterDilate(out,17);
-            imwrite("img_output/Donuuut2.PNG", out);
+            img = GrayScale.filterGrayscale(img);
+            try {
+                img = Dilate.filterDilate(img,6);
+            } catch (DilateException e) {
+                e.printStackTrace();
+            }
+            img = img;
+            imwrite("img_output/img.jpg", img);
             System.out.println("Done");
         }
     }

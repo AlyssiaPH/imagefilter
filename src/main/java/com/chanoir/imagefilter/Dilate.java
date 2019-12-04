@@ -15,10 +15,15 @@ public class Dilate extends Filter {
      * @param size The size of the blur
      * @return the image dilated
      */
-    public static Mat filterDilate(Mat image, int size) {
-        Mat result = image.clone();
-        Mat element = getStructuringElement(Imgproc.MORPH_RECT, new Size(2 * size + 1, 2 * size + 1));
-        dilate(image, result, element);
-        return result;
+    public static Mat filterDilate(Mat image, int size) throws DilateException {
+        if (size<0){
+            throw new DilateException("the size have to be superior of 0.");
+        }
+        else {
+            Mat result = image.clone();
+            Mat element = getStructuringElement(Imgproc.MORPH_RECT, new Size(2 * size + 1, 2 * size + 1));
+            dilate(image, result, element);
+            return result;
+        }
     }
 }
