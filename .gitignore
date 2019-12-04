@@ -76,3 +76,5 @@ fabric.properties
 src/main/java/com/chanoir/img/
 
 img_output/
+
+.gradle/5.2.1/javaCompile/
