@@ -9,12 +9,15 @@ import java.util.Scanner;
 
 public class Logger {
 
+    /**
+     * Complete the log with the current date and the sentence expected.
+     * @param sentence The sentence we want to log
+     */
     public static void logger(String sentence) {
         try {
             FileWriter myWriter = new FileWriter("access.log",true);
             myWriter.write("\n"+ LocalDateTime.now()+" : "+sentence);
             myWriter.close();
-            //System.out.println("Success");
         }
         catch (IOException e) {
             System.out.println("An error occurred.");

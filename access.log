@@ -143,3 +143,173 @@
 2019-12-05T11:32:47.443809 : Start edition of : Grumpy_Cat_The_Little_Mermaid.jpeg
 2019-12-05T11:32:47.444033 : Filter error : the dilate size need to be superior at 0 and odd.
 2019-12-05T11:32:47.444322 : Filter exception, filters not apply.
+2019-12-05T11:41:28.045552 : -----App started-----
+2019-12-05T11:41:30.447178 : Start edition of : Unicorn.jpg
+2019-12-05T11:41:30.755204 : Apply blur to the image.
+2019-12-05T11:41:30.765205 : Image transform in grayscales.
+2019-12-05T11:41:30.772945 : Dilate filter apply to the image.
+2019-12-05T11:41:30.952058 : Start edition of : Galaxy.PNG
+2019-12-05T11:41:31.029065 : Apply blur to the image.
+2019-12-05T11:41:31.031540 : Image transform in grayscales.
+2019-12-05T11:41:31.038586 : Dilate filter apply to the image.
+2019-12-05T11:41:31.116385 : Start edition of : KFC.jpg
+2019-12-05T11:41:31.144017 : Apply blur to the image.
+2019-12-05T11:41:31.145611 : Image transform in grayscales.
+2019-12-05T11:41:31.147908 : Dilate filter apply to the image.
+2019-12-05T11:41:31.176106 : Start edition of : Grumpy_Cat_The_Little_Mermaid.jpeg
+2019-12-05T11:41:31.197966 : Apply blur to the image.
+2019-12-05T11:41:31.198714 : Image transform in grayscales.
+2019-12-05T11:41:31.200019 : Dilate filter apply to the image.
+2019-12-05T13:24:36.169504 : -----App started-----
+2019-12-05T13:24:38.604641 : Start edition of : Unicorn.jpg
+2019-12-05T13:24:38.971589 : Apply blur to the image.
+2019-12-05T13:24:38.983707 : Image transform in grayscales.
+2019-12-05T13:24:38.990977 : Dilate filter apply to the image.
+2019-12-05T13:24:39.191840 : Start edition of : Galaxy.PNG
+2019-12-05T13:24:39.266916 : Apply blur to the image.
+2019-12-05T13:24:39.269899 : Image transform in grayscales.
+2019-12-05T13:24:39.276202 : Dilate filter apply to the image.
+2019-12-05T13:24:39.354063 : Start edition of : KFC.jpg
+2019-12-05T13:24:39.379466 : Apply blur to the image.
+2019-12-05T13:24:39.380595 : Image transform in grayscales.
+2019-12-05T13:24:39.382784 : Dilate filter apply to the image.
+2019-12-05T13:24:39.413062 : Start edition of : Grumpy_Cat_The_Little_Mermaid.jpeg
+2019-12-05T13:24:39.435827 : Apply blur to the image.
+2019-12-05T13:24:39.436511 : Image transform in grayscales.
+2019-12-05T13:24:39.437925 : Dilate filter apply to the image.
+2019-12-05T13:41:53.379917 : -----App started-----
+2019-12-05T13:41:55.737595 : Start edition of : Unicorn.jpg
+2019-12-05T13:41:56.048237 : Apply blur to the image.
+2019-12-05T13:41:56.056980 : Image transform in grayscales.
+2019-12-05T13:41:56.064816 : Dilate filter apply to the image.
+2019-12-05T13:41:56.241536 : Start edition of : Galaxy.PNG
+2019-12-05T13:41:56.324479 : Apply blur to the image.
+2019-12-05T13:41:56.327161 : Image transform in grayscales.
+2019-12-05T13:41:56.334062 : Dilate filter apply to the image.
+2019-12-05T13:41:56.414270 : Start edition of : KFC.jpg
+2019-12-05T13:41:56.443922 : Apply blur to the image.
+2019-12-05T13:41:56.445912 : Image transform in grayscales.
+2019-12-05T13:41:56.449703 : Dilate filter apply to the image.
+2019-12-05T13:41:56.489732 : Start edition of : Grumpy_Cat_The_Little_Mermaid.jpeg
+2019-12-05T13:41:56.510595 : Apply blur to the image.
+2019-12-05T13:41:56.511253 : Image transform in grayscales.
+2019-12-05T13:41:56.512515 : Dilate filter apply to the image.
+2019-12-05T13:42:26.358153 : -----App started-----
+2019-12-05T13:42:28.707470 : Start edition of : Unicorn.jpg
+2019-12-05T13:42:29.007856 : Apply blur to the image.
+2019-12-05T13:42:29.016593 : Image transform in grayscales.
+2019-12-05T13:42:29.025910 : Dilate filter apply to the image.
+2019-12-05T13:42:29.194155 : Start edition of : Galaxy.PNG
+2019-12-05T13:42:29.261419 : Apply blur to the image.
+2019-12-05T13:42:29.264044 : Image transform in grayscales.
+2019-12-05T13:42:29.270635 : Dilate filter apply to the image.
+2019-12-05T13:42:29.346993 : Start edition of : KFC.jpg
+2019-12-05T13:42:29.376914 : Apply blur to the image.
+2019-12-05T13:42:29.378197 : Image transform in grayscales.
+2019-12-05T13:42:29.380299 : Dilate filter apply to the image.
+2019-12-05T13:42:29.412556 : Start edition of : Grumpy_Cat_The_Little_Mermaid.jpeg
+2019-12-05T13:42:29.432705 : Apply blur to the image.
+2019-12-05T13:42:29.433473 : Image transform in grayscales.
+2019-12-05T13:42:29.434802 : Dilate filter apply to the image.
+2019-12-05T13:42:34.017353 : -----App started-----
+2019-12-05T13:42:53.932708 : -----App started-----
+2019-12-05T13:42:56.358161 : Start edition of : Unicorn.jpg
+2019-12-05T13:42:56.660389 : Apply blur to the image.
+2019-12-05T13:42:56.668905 : Image transform in grayscales.
+2019-12-05T13:42:56.676151 : Dilate filter apply to the image.
+2019-12-05T13:42:56.848201 : Start edition of : Galaxy.PNG
+2019-12-05T13:42:56.916152 : Apply blur to the image.
+2019-12-05T13:42:56.918861 : Image transform in grayscales.
+2019-12-05T13:42:56.928390 : Dilate filter apply to the image.
+2019-12-05T13:42:57.003118 : Start edition of : KFC.jpg
+2019-12-05T13:42:57.025999 : Apply blur to the image.
+2019-12-05T13:42:57.027513 : Image transform in grayscales.
+2019-12-05T13:42:57.030848 : Dilate filter apply to the image.
+2019-12-05T13:42:57.058706 : Start edition of : Grumpy_Cat_The_Little_Mermaid.jpeg
+2019-12-05T13:42:57.078513 : Apply blur to the image.
+2019-12-05T13:42:57.079456 : Image transform in grayscales.
+2019-12-05T13:42:57.081272 : Dilate filter apply to the image.
+2019-12-05T13:50:04.301976 : -----App started-----
+2019-12-05T13:50:06.714094 : Start edition of : Unicorn.jpg
+2019-12-05T13:50:07.013876 : Apply blur to the image.
+2019-12-05T13:50:07.022419 : Image transform in grayscales.
+2019-12-05T13:50:07.030534 : Dilate filter apply to the image.
+2019-12-05T13:50:07.045818 : Finish edition of : Unicorn.jpg
+2019-12-05T13:50:07.210143 : Start edition of : Galaxy.PNG
+2019-12-05T13:50:07.281336 : Apply blur to the image.
+2019-12-05T13:50:07.284242 : Image transform in grayscales.
+2019-12-05T13:50:07.290953 : Dilate filter apply to the image.
+2019-12-05T13:50:07.347600 : Finish edition of : Galaxy.PNG
+2019-12-05T13:50:07.372649 : Start edition of : KFC.jpg
+2019-12-05T13:50:07.397754 : Apply blur to the image.
+2019-12-05T13:50:07.398859 : Image transform in grayscales.
+2019-12-05T13:50:07.400996 : Dilate filter apply to the image.
+2019-12-05T13:50:07.418058 : Finish edition of : KFC.jpg
+2019-12-05T13:50:07.431063 : Start edition of : Grumpy_Cat_The_Little_Mermaid.jpeg
+2019-12-05T13:50:07.446671 : Apply blur to the image.
+2019-12-05T13:50:07.447363 : Image transform in grayscales.
+2019-12-05T13:50:07.448587 : Dilate filter apply to the image.
+2019-12-05T13:50:07.457341 : Finish edition of : Grumpy_Cat_The_Little_Mermaid.jpeg
+2019-12-05T13:50:21.189036 : -----App started-----
+2019-12-05T13:50:23.561155 : Start edition of : Unicorn.jpg
+2019-12-05T13:50:23.862698 : Apply blur to the image.
+2019-12-05T13:50:23.871069 : Image transform in grayscales.
+2019-12-05T13:50:23.877581 : Dilate filter apply to the image.
+2019-12-05T13:50:23.893020 : Finish edition of : Unicorn.jpg
+2019-12-05T13:50:24.048064 : Start edition of : Galaxy.PNG
+2019-12-05T13:50:24.117688 : Apply blur to the image.
+2019-12-05T13:50:24.121292 : Image transform in grayscales.
+2019-12-05T13:50:24.127446 : Dilate filter apply to the image.
+2019-12-05T13:50:24.178313 : Finish edition of : Galaxy.PNG
+2019-12-05T13:50:24.200776 : Start edition of : KFC.jpg
+2019-12-05T13:50:24.226871 : Apply blur to the image.
+2019-12-05T13:50:24.228013 : Image transform in grayscales.
+2019-12-05T13:50:24.230088 : Dilate filter apply to the image.
+2019-12-05T13:50:24.246635 : Finish edition of : KFC.jpg
+2019-12-05T13:50:24.257113 : Start edition of : Grumpy_Cat_The_Little_Mermaid.jpeg
+2019-12-05T13:50:24.273435 : Apply blur to the image.
+2019-12-05T13:50:24.274079 : Image transform in grayscales.
+2019-12-05T13:50:24.275344 : Dilate filter apply to the image.
+2019-12-05T13:50:24.284048 : Finish edition of : Grumpy_Cat_The_Little_Mermaid.jpeg
+2019-12-05T13:51:48.197282 : -----App started-----
+2019-12-05T13:51:50.539734 : Start edition of : Unicorn.jpg
+2019-12-05T13:51:50.832558 : Apply blur to the image.
+2019-12-05T13:51:50.842383 : Image transform in grayscales.
+2019-12-05T13:51:50.850573 : Dilate filter apply to the image.
+2019-12-05T13:51:50.865112 : Finish edition of : Unicorn.jpg
+2019-12-05T13:51:51.018722 : Start edition of : Galaxy.PNG
+2019-12-05T13:51:51.085292 : Apply blur to the image.
+2019-12-05T13:51:51.088237 : Image transform in grayscales.
+2019-12-05T13:51:51.094364 : Dilate filter apply to the image.
+2019-12-05T13:51:51.145103 : Finish edition of : Galaxy.PNG
+2019-12-05T13:51:51.166573 : Start edition of : KFC.jpg
+2019-12-05T13:51:51.192205 : Apply blur to the image.
+2019-12-05T13:51:51.193454 : Image transform in grayscales.
+2019-12-05T13:51:51.195459 : Dilate filter apply to the image.
+2019-12-05T13:51:51.212001 : Finish edition of : KFC.jpg
+2019-12-05T13:51:51.222716 : Start edition of : Grumpy_Cat_The_Little_Mermaid.jpeg
+2019-12-05T13:51:51.239079 : Apply blur to the image.
+2019-12-05T13:51:51.239798 : Image transform in grayscales.
+2019-12-05T13:51:51.241012 : Dilate filter apply to the image.
+2019-12-05T13:51:51.249661 : Finish edition of : Grumpy_Cat_The_Little_Mermaid.jpeg
+2019-12-05T13:53:16.272020 : -----App started-----
+2019-12-05T13:53:18.561818 : Start edition of : Unicorn.jpg
+2019-12-05T13:53:18.861269 : Apply blur to the image.
+2019-12-05T13:53:18.869825 : Image transform in grayscales.
+2019-12-05T13:53:18.876336 : Dilate filter apply to the image.
+2019-12-05T13:53:18.890870 : Finish edition of : Unicorn.jpg
+2019-12-05T13:53:19.053932 : Start edition of : Galaxy.PNG
+2019-12-05T13:53:19.127205 : Apply blur to the image.
+2019-12-05T13:53:19.130266 : Image transform in grayscales.
+2019-12-05T13:53:19.137415 : Dilate filter apply to the image.
+2019-12-05T13:53:19.187769 : Finish edition of : Galaxy.PNG
+2019-12-05T13:53:19.210122 : Start edition of : KFC.jpg
+2019-12-05T13:53:19.237159 : Apply blur to the image.
+2019-12-05T13:53:19.238335 : Image transform in grayscales.
+2019-12-05T13:53:19.240342 : Dilate filter apply to the image.
+2019-12-05T13:53:19.256814 : Finish edition of : KFC.jpg
+2019-12-05T13:53:19.268443 : Start edition of : Grumpy_Cat_The_Little_Mermaid.jpeg
+2019-12-05T13:53:19.286021 : Apply blur to the image.
+2019-12-05T13:53:19.286861 : Image transform in grayscales.
+2019-12-05T13:53:19.288130 : Dilate filter apply to the image.
+2019-12-05T13:53:19.297486 : Finish edition of : Grumpy_Cat_The_Little_Mermaid.jpeg

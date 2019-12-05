@@ -5,8 +5,6 @@ import org.apache.commons.cli.*;
 public class imageFilterCli {
 
 
-
-
     private static Options configFirstParameters() {
 
         final Option helpFileOption = Option.builder("h")
