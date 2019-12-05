@@ -1,10 +1,15 @@
 package com.chanoir.imagefilter;
 
 import org.apache.commons.cli.*;
+import org.bytedeco.opencv.opencv_core.Mat;
+
+import java.io.File;
+import java.util.ArrayList;
+
+import static org.bytedeco.opencv.global.opencv_imgcodecs.imread;
+import static org.bytedeco.opencv.global.opencv_imgcodecs.imwrite;
 
 public class imageFilterCli {
-
-
 
 
     private static Options configFirstParameters(){
@@ -18,9 +23,7 @@ public class imageFilterCli {
                 .build();
 
         final Options firstOptions = new Options();
-
         firstOptions.addOption(helpFileOption);
-
         return firstOptions;
     }
 
@@ -42,8 +45,6 @@ public class imageFilterCli {
                 .required(true)
                 .build() ;
 
-
-
         final Option filter = Option.builder("f")
                 .longOpt("filters")
                 .desc("filtre à appliquer ")
@@ -63,13 +64,10 @@ public class imageFilterCli {
         options.addOption(filter);
 
         return options ;
-
-
-
     }
 
 
-    public static void main(String[] args) throws ParseException {
+    public static void parser(String[] args) throws ParseException {
 
         final Options firstOptions = configFirstParameters();
         final Options options = configParameters(firstOptions);
@@ -81,7 +79,6 @@ public class imageFilterCli {
         final CommandLine line = parser2.parse(options, args);
 
         final String inputDirectory = line.getOptionValue("input-dir","");
-
         final String outputDirectory = line.getOptionValue("output-dir","");
 
         final String filters = line.getOptionValue("filters","");
@@ -103,7 +100,39 @@ public class imageFilterCli {
 
 
 
+        File repertoryOut = new File(outputDirectory);
+        File repertory = new File(inputDirectory);
+
+        ArrayList<File> fileslist = new ArrayList<>();
+        File outputDir = new File("img_output");
+        outputDir.mkdirs();
+
+        for (File f : repertory.listFiles()) {
+            if (!f.getName().endsWith(".PNG") && !f.getName().endsWith(".jpg") && !f.getName().endsWith(".jpeg") ) {
+                continue;
+            }
+
+            Mat img = imread(f.getAbsolutePath());
+            Logger.logger("Start edition of : "+f.getName());
+
+            if (img != null) {
+                try {
+                    img = Blur.filterBlur(img, 45);
+                    img = GrayScale.filterGrayscale(img);
+                    img = Dilate.filterDilate(img, 10);
+                } catch (FilterException e) {
+                    Logger.logger("Filter exception, filters not apply.");
+                    e.printStackTrace();
+                }
+                File outputFile = new File(outputDir, f.getName());
+                imwrite(outputFile.getAbsolutePath(), img);
+                Logger.logger("Finish edition of : "+f.getName());
+                System.out.println("///Done///"+f.getName());
+            }
+        }
     }
+
+
 
 
 
