@@ -1,0 +1,108 @@
+package com.chanoir.imagefilter;
+
+import org.apache.commons.cli.*;
+
+public class imageFilterCli {
+
+
+
+
+    private static Options configFirstParameters() {
+
+        final Option helpFileOption = Option.builder("h")
+                .longOpt("help")
+                .desc("usage: imagefilter\n" +
+                        "-h,----help\n" +
+                        "-i,--input-dir <directory> \n -o,--output-dir <directory>")
+                .build();
+
+        final Options firstOptions = new Options();
+
+        firstOptions.addOption(helpFileOption);
+
+        return firstOptions;
+    }
+
+    private static Options configParameters(final Options firstOptions){
+
+        final Option imagesInput = Option.builder("id")
+                .longOpt("input-dir")
+                .desc("Dossier avec les images sur lesquelles appliquer un filtre ")
+                .hasArg(true)
+                .argName("input-dir")
+                .required(true)
+                .build() ;
+
+        final Option imagesOutput = Option.builder("od")
+                .longOpt("output-dir")
+                .desc("Dossier avec les images qui ont été filtrées")
+                .hasArg(true)
+                .argName("output-dir")
+                .required(true)
+                .build() ;
+
+
+
+        final Option filter = Option.builder("f")
+                .longOpt("filters")
+                .desc("filtre à appliquer ")
+                .hasArg(true)
+                .argName("filters")
+                .required(true)
+                .build() ;
+
+        final Options options = new Options() ;
+
+        for (final Option fo : firstOptions.getOptions()) {
+            options.addOption(fo);
+            }
+
+        options.addOption(imagesInput);
+        options.addOption(imagesOutput);
+        options.addOption(filter);
+
+        return options ;
+
+
+
+    }
+
+
+    public static void main(String[] args) throws ParseException {
+
+        final Options firstOptions = configFirstParameters();
+        final Options options = configParameters(firstOptions);
+
+        final CommandLineParser parser1 = new DefaultParser();
+        final CommandLine firstLine = parser1.parse(firstOptions, args, true);
+
+        final CommandLineParser parser2 = new DefaultParser();
+        final CommandLine line = parser2.parse(options, args);
+
+        final String inputDirectory = line.getOptionValue("input-dir","");
+
+        final String outputDirectory = line.getOptionValue("output-dir","");
+
+        final String filters = line.getOptionValue("filters","");
+
+        boolean helpMode = firstLine.hasOption("help");
+        if (helpMode) {
+            final HelpFormatter formatter = new HelpFormatter();
+            formatter.printHelp("imageFilterCli", options, true);
+            System.exit(0);
+
+            
+
+
+        } 
+
+
+
+    }
+
+
+
+
+
+
+}
