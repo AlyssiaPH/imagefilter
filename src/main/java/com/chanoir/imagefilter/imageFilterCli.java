@@ -95,9 +95,11 @@ public class imageFilterCli {
 
         final String filters = line.getOptionValue("filters","");
 
+        /*
         System.out.println(inputDirectory);
         System.out.println(outputDirectory);
         System.out.println(filters);
+        */
 
         boolean helpMode = firstLine.hasOption("help");
         if (helpMode) {
@@ -126,7 +128,6 @@ public class imageFilterCli {
             Logger.logger("Start edition of : "+f.getName());
 
             String[] filterslist = filters.split(Pattern.quote("|"));
-            System.out.println(filterslist);
             if (img != null) {
             for (String filter : filterslist) {
 
@@ -136,7 +137,6 @@ public class imageFilterCli {
                     size =(int) Integer.parseInt(filterinfo[1]);
                 }
                 String filt = filterinfo[0];
-                System.out.println("Process///////"+ filt);
                 try {
                     switch (filt){
                         case ("blur"):
@@ -157,7 +157,6 @@ public class imageFilterCli {
             File outputFile = new File(outputDir, f.getName());
             imwrite(outputFile.getAbsolutePath(), img);
             Logger.logger("Finish edition of : "+f.getName());
-            System.out.println("///Done///"+f.getName());
             }
         }
     }
