@@ -5,13 +5,16 @@ import org.apache.commons.cli.*;
 public class imageFilterCli {
 
 
-    private static Options configFirstParameters() {
+
+
+    private static Options configFirstParameters(){
 
         final Option helpFileOption = Option.builder("h")
                 .longOpt("help")
                 .desc("usage: imagefilter\n" +
                         "-h,----help\n" +
-                        "-i,--input-dir <directory> \n -o,--output-dir <directory>")
+                        "-i,--input-dir <directory> \n -o,--output-dir <directory>"
+                        )
                 .build();
 
         final Options firstOptions = new Options();
@@ -83,16 +86,20 @@ public class imageFilterCli {
 
         final String filters = line.getOptionValue("filters","");
 
+        System.out.println(inputDirectory);
+        System.out.println(outputDirectory);
+        System.out.println(filters);
+
         boolean helpMode = firstLine.hasOption("help");
         if (helpMode) {
             final HelpFormatter formatter = new HelpFormatter();
             formatter.printHelp("imageFilterCli", options, true);
             System.exit(0);
 
-            
+            //
 
 
-        } 
+        }
 
 
 
@@ -104,3 +111,6 @@ public class imageFilterCli {
 
 
 }
+
+
+
