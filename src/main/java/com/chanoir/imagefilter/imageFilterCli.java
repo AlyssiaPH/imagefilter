@@ -12,13 +12,16 @@ import static org.bytedeco.opencv.global.opencv_imgcodecs.imwrite;
 
 public class imageFilterCli {
 
-
+    /**
+     * Define the help option.
+     * @return the help options for the argument.
+     */
     private static Options configFirstParameters(){
 
         final Option helpFileOption = Option.builder("h")
                 .longOpt("help")
                 .desc("usage: imagefilter\n" +
-                        "-h,----help\n" +
+                        "-h,--help\n" +
                         "-i,--input-dir <directory> \n -o,--output-dir <directory>"
                         )
                 .build();
@@ -28,6 +31,10 @@ public class imageFilterCli {
         return firstOptions;
     }
 
+    /**
+     * Define all of the possibles options.
+     *@return the differents options for the argument.
+     */
     private static Options configParameters(final Options firstOptions){
 
         final Option imagesInput = Option.builder("id")
@@ -67,7 +74,11 @@ public class imageFilterCli {
         return options ;
     }
 
-
+    /**
+     * Parse the args and apply the filters
+     * @param args The argument of the CLI.
+     * @throws ParseException
+     */
     public static void parser(String[] args) throws ParseException {
 
         final Options firstOptions = configFirstParameters();
@@ -142,27 +153,14 @@ public class imageFilterCli {
                     Logger.logger("Filter exception, filters not apply.");
                     e.printStackTrace();
                 }
-
             }
-
-            String filter=null;
-
-
-                File outputFile = new File(outputDir, f.getName());
-                imwrite(outputFile.getAbsolutePath(), img);
-                Logger.logger("Finish edition of : "+f.getName());
-                System.out.println("///Done///"+f.getName());
+            File outputFile = new File(outputDir, f.getName());
+            imwrite(outputFile.getAbsolutePath(), img);
+            Logger.logger("Finish edition of : "+f.getName());
+            System.out.println("///Done///"+f.getName());
             }
         }
     }
-
-
-
-
-
-
-
-
 }
 
 
