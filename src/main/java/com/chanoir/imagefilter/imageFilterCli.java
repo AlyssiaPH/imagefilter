@@ -5,6 +5,7 @@ import org.bytedeco.opencv.opencv_core.Mat;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 import static org.bytedeco.opencv.global.opencv_imgcodecs.imread;
 import static org.bytedeco.opencv.global.opencv_imgcodecs.imwrite;
@@ -113,23 +114,40 @@ public class imageFilterCli {
             Mat img = imread(f.getAbsolutePath());
             Logger.logger("Start edition of : "+f.getName());
 
+            String[] filterslist = filters.split(Pattern.quote("|"));
+            System.out.println(filterslist);
             if (img != null) {
-                try {
+            for (String filter : filterslist) {
 
-                    switch (filters){
+                String[] filterinfo = filter.split(":");
+                int size=1;
+                if (filterinfo.length>1){
+                    size =(int) Integer.parseInt(filterinfo[1]);
+                }
+                String filt = filterinfo[0];
+                System.out.println("Process///////"+ filt);
+                try {
+                    switch (filt){
                         case ("blur"):
-                            img = Blur.filterBlur(img, 45);
+                            img = Blur.filterBlur(img, size);
                             break;
-                        case ("grayscale"):
+                        case ("grayscales"):
                             img = GrayScale.filterGrayscale(img);
                             break;
-                        case ("dilate"):
-                            img = Dilate.filterDilate(img, 10);
+                         case ("dilate"):
+                             img = Dilate.filterDilate(img, size);
                     }
-                } catch (FilterException e) {
+                }
+                catch (FilterException e) {
                     Logger.logger("Filter exception, filters not apply.");
                     e.printStackTrace();
                 }
+
+            }
+
+            String filter=null;
+
+
                 File outputFile = new File(outputDir, f.getName());
                 imwrite(outputFile.getAbsolutePath(), img);
                 Logger.logger("Finish edition of : "+f.getName());
