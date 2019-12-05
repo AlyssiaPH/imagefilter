@@ -15,12 +15,14 @@ public class Dilate extends Filter {
      */
     public static Mat filterDilate(Mat image, int size) throws FilterException {
         if (size<0){
+            Logger.logger("Filter error : the dilate size need to be superior at 0.");
             throw new FilterException("The size must need to be superior at 0.");
         }
         else {
             Mat result = image.clone();
             Mat element = getStructuringElement(Imgproc.MORPH_RECT, new Size(2 * size + 1, 2 * size + 1));
             dilate(image, result, element);
+            Logger.logger("Dilate filter apply to the image.");
             return result;
         }
     }

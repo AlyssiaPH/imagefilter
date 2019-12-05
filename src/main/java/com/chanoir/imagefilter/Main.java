@@ -1,10 +1,10 @@
 package com.chanoir.imagefilter;
 
+import org.apache.commons.cli.*;
 import org.bytedeco.opencv.opencv_core.Mat;
 import java.io.File;
 import java.util.ArrayList;
-import static org.bytedeco.opencv.global.opencv_imgcodecs.imread;
-import static org.bytedeco.opencv.global.opencv_imgcodecs.imwrite;
+import static org.bytedeco.opencv.global.opencv_imgcodecs.*;
 
 public class Main {
 
@@ -12,6 +12,9 @@ public class Main {
     public static File repertory = new File("img");
 
     public static void main(String[] args) {
+
+        Logger.logger("-----App started-----");
+
 
         ArrayList<File> fileslist = new ArrayList<>();
         File outputDir = new File("img_output");
@@ -22,19 +25,18 @@ public class Main {
                 continue;
             }
 
-
             System.out.println(f);
             Mat img = imread(f.getAbsolutePath());
+            Logger.logger("Start edition of : "+f.getName());
             if (img != null) {
                 try {
                     img = Blur.filterBlur(img, 45);
                     img = GrayScale.filterGrayscale(img);
                     img = Dilate.filterDilate(img, 10);
                 } catch (FilterException e) {
+                    Logger.logger("Filter exception, filters not apply.");
                     e.printStackTrace();
                 }
-
-                img = img;
 
                 File outputFile = new File(outputDir, f.getName());
                 imwrite(outputFile.getAbsolutePath(), img);

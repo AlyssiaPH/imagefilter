@@ -14,11 +14,13 @@ public class Blur extends Filter {
      */
     public static Mat filterBlur(Mat image, int size) throws FilterException {
         if (size %2 == 0 || size<0){
+            Logger.logger("Filter error : the dilate size need to be superior at 0 and odd.");
             throw new FilterException("The blur size need to be odd and >0.");
         }
         else {
             Mat result = image.clone();
             GaussianBlur(image, result, new Size(size, size), 0);
+            Logger.logger("Apply blur to the image.");
             return result;
         }
     }
