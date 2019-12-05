@@ -14,10 +14,12 @@ public class Main {
 
     public static void main(String[] args) {
 
+        /*
         System.out.println("Program Arguments:");
         for (String arg : args) {
             System.out.println("\t" + arg);
         }
+        */
 
         Logger.logger("-----App started-----");
 

@@ -95,10 +95,9 @@ public class imageFilterCli {
 
             //
 
-
         }
 
-
+        //Apply filters depending of the inputs.
 
         File repertoryOut = new File(outputDirectory);
         File repertory = new File(inputDirectory);
@@ -108,18 +107,25 @@ public class imageFilterCli {
         outputDir.mkdirs();
 
         for (File f : repertory.listFiles()) {
-            if (!f.getName().endsWith(".PNG") && !f.getName().endsWith(".jpg") && !f.getName().endsWith(".jpeg") ) {
+            if (!f.getName().endsWith(".PNG") && !f.getName().endsWith(".jpg") && !f.getName().endsWith(".jpeg") && !f.getName().endsWith(".png")) {
                 continue;
             }
-
             Mat img = imread(f.getAbsolutePath());
             Logger.logger("Start edition of : "+f.getName());
 
             if (img != null) {
                 try {
-                    img = Blur.filterBlur(img, 45);
-                    img = GrayScale.filterGrayscale(img);
-                    img = Dilate.filterDilate(img, 10);
+
+                    switch (filters){
+                        case ("blur"):
+                            img = Blur.filterBlur(img, 45);
+                            break;
+                        case ("grayscale"):
+                            img = GrayScale.filterGrayscale(img);
+                            break;
+                        case ("dilate"):
+                            img = Dilate.filterDilate(img, 10);
+                    }
                 } catch (FilterException e) {
                     Logger.logger("Filter exception, filters not apply.");
                     e.printStackTrace();
