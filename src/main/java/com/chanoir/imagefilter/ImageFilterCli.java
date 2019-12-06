@@ -117,8 +117,8 @@ public class ImageFilterCli {
         File repertory = new File(inputDirectory);
 
         ArrayList<File> fileslist = new ArrayList<>();
-        File outputDir = new File("img_output");
-        outputDir.mkdirs();
+        
+        repertoryOut.mkdirs();
 
         for (File f : repertory.listFiles()) {
             if (!f.getName().endsWith(".PNG") && !f.getName().endsWith(".jpg") && !f.getName().endsWith(".jpeg") && !f.getName().endsWith(".png")) {
@@ -154,7 +154,7 @@ public class ImageFilterCli {
                     e.printStackTrace();
                 }
             }
-            File outputFile = new File(outputDir, f.getName());
+            File outputFile = new File(repertoryOut, f.getName());
             imwrite(outputFile.getAbsolutePath(), img);
             Logger.logger("Finish edition of : "+f.getName());
             }
