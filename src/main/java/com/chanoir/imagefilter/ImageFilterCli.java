@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 import static org.bytedeco.opencv.global.opencv_imgcodecs.imread;
 import static org.bytedeco.opencv.global.opencv_imgcodecs.imwrite;
 
-public class imageFilterCli {
+public class ImageFilterCli {
 
     /**
      * Define the help option.
