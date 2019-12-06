@@ -24,7 +24,7 @@ public class Main {
         Logger.logger("-----App started-----");
 
         try {
-            imageFilterCli.parser(args);
+            ImageFilterCli.parser(args);
         } catch (ParseException e) {
             e.printStackTrace();
         }
