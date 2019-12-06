@@ -95,12 +95,6 @@ public class ImageFilterCli {
 
         final String filters = line.getOptionValue("filters","");
 
-        /*
-        System.out.println(inputDirectory);
-        System.out.println(outputDirectory);
-        System.out.println(filters);
-        */
-
         boolean helpMode = firstLine.hasOption("help");
         if (helpMode) {
             final HelpFormatter formatter = new HelpFormatter();
